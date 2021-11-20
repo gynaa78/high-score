@@ -1,24 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
+import allCountryScores from './Score'
+
 
 function App() {
+console.log(`allCountryScores`, allCountryScores)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <table className="table">
+      <thead>
+        {" "}
+        <tr>
+          <th>Country</th>
+          <th>Score</th>
+        </tr>
+      </thead>
+      <tbody>
+        {allCountryScores.map((country) => (
+          <tr>
+            <td>{country.name}</td>
+            <td>{country.scores[0].n}</td>
+            <td>{country.scores[0].s}</td>
+
+          </tr>
+        ))}
+      </tbody>
+    </table>
   );
 }
 
