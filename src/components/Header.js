@@ -1,10 +1,10 @@
 import React from 'react'
 
 const Header = () => {
-    return (
-        <div>
-            <header className="App-header">High Score</header>
-        </div>
+    return ( 
+        <h1 classname = "app-header">
+            High Scores Per Country 
+        </h1>
     )
 }
 

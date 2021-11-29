@@ -11,3 +11,44 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.App {
+  border: 2px solid GREY;
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 1rem;
+}
+
+.app-header {
+ color:rgb(155, 50, 9);
+}
+
+.scores-table {
+  border: 6px solid #87b929;
+  margin: 2rem 0;
+  padding: 1rem;
+}
+
+tr {
+  height: 3rem;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+table td {
+   text-align: right;
+}
+.table-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: grey;
+  text-align: center;
+}
+.name {
+ width: 50%;
+ text-transform: uppercase;
+}
+.score {
+  width: 50%;
+}

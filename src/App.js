@@ -1,30 +1,21 @@
 import './App.css';
-import allCountryScores from './Score'
+import allCountryScores from './Score';
+import ScoresTable from './components/ScoresTable';
+import Header from './components/Header';
 
 
 function App() {
-console.log(`allCountryScores`, allCountryScores)
-  return (
-    <table className="table">
-      <thead>
-        {" "}
-        <tr>
-          <th>Country</th>
-          <th>Score</th>
-        </tr>
-      </thead>
-      <tbody>
-        {allCountryScores.map((country) => (
-          <tr>
-            <td>{country.name}</td>
-            <td>{country.scores[0].n}</td>
-            <td>{country.scores[0].s}</td>
-
-          </tr>
-        ))}
-      </tbody>
-    </table>
-  );
+  return ( 
+  
+    <div className = "App"> 
+    <Header/>
+ {
+   allCountryScores.map(({name, scores}, index) => {
+     return  <ScoresTable key={index} name={name} scores={scores} />
+    })
+  }
+  </div> 
+  );  
 }
 
 export default App;
